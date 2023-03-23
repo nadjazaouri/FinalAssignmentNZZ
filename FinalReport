@@ -1,0 +1,30 @@
+Firstly, after adding the given dataset to the mySql workbench, I selected the requested
+columns of the table using the following query:
+
+SELECT *
+FROM `finance_liquor_sales`
+WHERE date BETWEEN '2016-01-01' AND '2019-12-31';
+
+Next, I exported the data to a CSV file as instructed.
+
+Using PyCharm, I went on and uploaded the CSV data file to the correct
+folder in order to gain access to it through my project.
+
+By following the aforementioned steps, all was set for writing the main code for the assignment.
+
+I chose Matplotlib instead of Tableau, because I personally find it to be more flexible and easier to debug
+or edit.
+
+In the main.py, I start the process by importing the needed packages, which I had previously installed. I import
+pandas as well as matplotlib in order to create the scatter chart that is requested.
+
+Next, I proceed by loading the CSV file with the selection of data from 2016 to 2019 and by convert the 'date' column
+to a datetime format (because otherwise there was an error in the data type, which is one of the main difficulties I faced).
+I then filter the data for years between 2016 and 2019. Here I had to adjust the name 'date'
+in order for it to be aligned with the used terms in the CSV file.
+
+Afterwards, it is needed to group the data by zip code and calculate the total bottles sold, as well as
+create a scatter chart of the number of bottles sold per zip code. In the scatter chart, I add colour based on the number of
+bottles sold for a more understandable representation of the data.
+
+Finally, I set the title and axis labels and display the plot.
